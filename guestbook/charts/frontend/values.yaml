@@ -1,0 +1,13 @@
+config:
+  guestbook_name: Unilab Technical Discovery Applications
+  backend_uri: "backend.minikube.local/guestbook"
+image:
+  repository: ernesen/frontend
+  tag: "2.0"
+replicaCount: 1
+service:
+  type: ClusterIP
+  port: 80
+ingress:
+  enabled: true
+  host: frontend.minikube.local
